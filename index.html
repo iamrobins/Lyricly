@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyric.ly by Robin</title>
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section>
+
+
+    <div class="logo">
+        <img src="/assets/LyriclyLogo.png">
+    </div>
+
+
+    <div id="musicContainer">
+        <div class="cover">
+            <img id="coverImg" src="/assets/TheFatRat - Rise Up.jpg" alt="">
+        </div>
+        <div class="info">
+            <div class="title">TheFatRat - Rise Up</div>
+        </div>
+
+
+        <div class="voice">
+           <span id="mic"><i class="material-icons">mic</i></span>
+           <span id="listen" style="display: none;"><i style="color: green;" class="material-icons">settings_voice</i></span>
+           <div id="retry" style="display: none;">You didn't said anything <i class="material-icons">refresh</i></div>
+        </div>
+
+
+
+        <div class="volume-box">
+            <span class="volume-down"><i class="material-icons">remove</i></span>
+            <input type="range" class="volume-range" step="1" value="80" min="0" max="100">
+            <span class="volume-up"><i class="material-icons">add</i></span>
+        </div>
+
+
+        <div class="music-box">
+            <input type="range" step="1" class="seekbar" value="0" min="0" max="100">
+
+            <audio class="music-element">
+                <source src="/assets/TheFatRat - Rise Up.webm" type="audio/webm">
+            </audio>
+            <span class="current-time">0:0</span><span class="duration">0:0</span>
+            <span class="play">
+                <i class="material-icons">play_arrow</i>
+            </span>
+        </div>
+    </div>
+
+
+    <div id="resultOptions" style="display: none;">
+        <h2 id="speechResult" >''</h2>
+
+        <div id="whatYouSaid">
+            <p>Do you said that?</p>
+            <i id="yes" class="material-icons">check</i> <i id="no" class="material-icons">clear</i>
+        </div>
+    </div>
+
+
+    </section>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

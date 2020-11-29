@@ -1,0 +1,229 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #f5e0e5;
+  background-image: linear-gradient(45deg, #ff9b9c 0%, #ffd4a7 100%);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C73, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+   0% {
+       background-position: 0 50%;
+   }
+   50% {
+    background-position: 100% 50%;
+   }
+   100% {
+    background-position: 0 50%;
+   } 
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+#musicContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 530px;
+    border-radius: 15px;
+    background-color: #fff6e7;
+    box-shadow: 0 15px 20px 0 #c58371;
+}
+
+#musicContainer .cover{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 20px 0 #d56c006d;
+}
+
+#musicContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#musicContainer .info {
+    position: absolute;
+    left: 50%;
+    top: 240px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#musicContainer .info .title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 2px;
+}
+
+.voice {
+    position: absolute;
+    left: 47%;
+    top: 290px;
+}
+
+i {
+    font-size: 24px;
+    color: #72646f;
+    cursor: pointer;
+}
+
+.volume-box {
+    /* display: none; */
+    position: absolute;
+    left: 50%;
+    top: 360px;
+    transform: translateX(-50%);
+    /* z-index: 1; */
+    padding: 0 20px;
+}
+
+.volume-box .volume-down {
+    position: absolute;
+    left: -15px;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #72646f;
+}
+
+.volume-box .volume-up {
+    position: absolute;
+    right: -15px;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #72646f;
+}
+
+.volume-box .volume-up::selection {
+    background-color: unset;
+}
+
+.volume-box input[type="range"] {
+    height: 5px;
+    width: 150px;
+    margin: 0 0 15px 0;
+}
+
+.music-box {
+    position: absolute;
+    left: 50%;
+    top: 410px;
+    transform: translateX(-50%);
+}
+.music-box input[type="range"] {
+    height: 5px;
+    width: 230px;
+    margin: 0 0 10px 0;
+}
+.music-box input[type="range"]::-webkit-slider-thumb {
+    height: 5px;
+    width: 7px;
+}
+.music-box .current-time {
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #72646f;
+}
+.music-box .duration {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #72646f;
+}
+.music-box .play,
+.music-box .pause {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff6e7;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.music-box .play i,
+.music-box .pause i {
+    font-size: 36px;
+    color: #72646f;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-48%, -50%);
+}
+.music-box .pause i {
+    font-size: 32px;
+    transform: translate(-50%, -50%);
+}
+
+#retry {
+    position: absolute;
+    width: 170px;
+    left: -4em;
+    font-weight: 500;
+}
+
+#retry i {
+    margin-left: 2.8em;
+}
+
+#resultOptions {
+    margin-top: 40rem;
+    width: 99.8vw;
+    text-align: center;
+    font-size: 20px;
+}
+
+#yes {
+    color: green;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+#yes:hover, #no:hover {
+    background: pink;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-delay: 0.2s;
+}
+
+#no {
+    color: red;
+    margin-left: 1em;
+    font-size: 1.5em;
+}   
