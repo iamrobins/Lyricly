@@ -235,10 +235,9 @@ i {
     }
 
     #musicContainer {
-        /* width: 330px;
-        height: 530px; */
         width: 250px;
         height: 400px;
+        margin-top: 20px;
     }
 
     #musicContainer .cover{
