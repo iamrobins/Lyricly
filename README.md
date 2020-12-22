@@ -1,4 +1,5 @@
 # lyricly
+### App Live Preview https://iamrobins.github.io/lyricly/
 <img src="app-pics/1.gif">
 
 ## Lyricly is voice search songs service.
